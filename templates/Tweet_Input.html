@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+html
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+div
+{
+    height: 100%;
+    width: 100%;
+
+    margin: auto;
+
+    padding: 10px;
+    font-size: 20px;
+
+    /* Dark Blue */
+    background-color: rgb(20, 29, 38);
+
+    /* Light Blue */
+    /*background-color: rgb(29, 161, 242);*/
+}
+
+h1, h2, h3, h4, h5, h6, p
+{
+    color: white;
+}
+
+textarea
+{
+    height: 10em;
+    width: 25em;
+    font-size: 25px;
+    font-family: "Times New Roman";
+}
+
+button
+{
+    height: 100px;
+    width: 300px;
+    background-color: rgb(29, 161, 242);
+    font-family: Courier;
+    font-size: 20px;
+}
+
+.Center
+{
+  text-align: center;
+}
+
+</style>
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Twitter Sentiment Analyser</title>
+
+</head>
+
+
+
+<body>
+
+<div class="Center">
+
+    <h3>Welcome To</h3>
+    <h1>UREKA's Twitter Sentiment Analyser</h1>
+
+    <br>
+
+    <h3>This website uses VADER to analyse the sentiment of tweets.</h3>
+    <h3>To try, paste any tweet in the textbox below!</h3>
+
+    <form action="{{ url_for ('Analysis') }}" method="post">
+        <textarea name="sentence"></textarea>
+        <br>
+        <br>
+        <button>Analyse Sentiment</button>
+    </form>
+
+</div>
+
+</body>
+
+
+
+</html>
