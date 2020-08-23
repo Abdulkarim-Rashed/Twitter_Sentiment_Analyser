@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn Twitter_Sentiment_Analyser:app
